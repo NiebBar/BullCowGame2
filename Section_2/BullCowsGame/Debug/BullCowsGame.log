@@ -1,0 +1,2 @@
+﻿  Main.cpp
+c:\users\student\documents\bullcowsgame\section_2\bullcowsgame\main.cpp : fatal error C1041: nie można otworzyć bazy danych programu 'C:\Users\student\Documents\BullCowsGame\Section_2\BullCowsGame\Debug\vc141.pdb'; jeśli wiele CL.exe zapisuje do tego samego pliku .PDB, użyj /FS
