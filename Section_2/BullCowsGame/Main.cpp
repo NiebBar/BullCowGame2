@@ -5,85 +5,66 @@
 using namespace std;
 
 void PrintIntro();
-string GetGuessAndPrintBack();
+void PlayGame();
+string GetGuess();
+bool AskToPlayAgain();
 
+//the entry point of aplication
 int main()
-
-
 {
-	//the entry point of aplication
-	PrintIntro();
-	
+	bool bPlayAgain = false;
+	do {
+		PrintIntro();
+		PlayGame();
+		bPlayAgain = AskToPlayAgain();
 
-	//get a guess from the payer
-	cout << "Enter your guess: ";
-	string guess = ""; 
-	getline(cin, guess);
-	
-
-	//repete the guess back to them
-	cout << "Your guess wa: " << guess << endl;
-
-	//get a guess from the payer
-	cout << "Enter your guess: ";
-	string Guess = "";
-	getline(cin, guess);
+	} while (bPlayAgain);
 
 
-	//repete the guess back to them
-	cout << "Your guess was: " << guess << endl;
-
-
-	//get a guess from the payer
-	cout << "Enter your guess: ";
-	getline(cin, guess);
-
-	//repete the guess back to them
-	cout << "Your guess was: " << guess << endl;
-
-	//loop for the number of turns asking for quesses
-	constexpr int NUMBER_OF_TURNS = 5;
-	for (int count = 1; count <= NUMBER_OF_TURNS; count++)
-
-	{
-
-		GetGuessAndPrintBack();
-		cout << endl;
-
-	}
-
-	cout << endl;
-
-
-	//pizza
-	return 0;
+	return 0; //exit the aplication
 }
 
+//intro
 void PrintIntro() {
 
-	//intro
+	constexpr int WORLD_LENGTH = 9;
 
-	void PrintIntro() {
-	
-		constexpr int WORLD_LENGTH = 9;
+	cout << "Welcome to Bu11s and Cows, a fun word game.\n";
+	cout << "Can you guess the " << WORLD_LENGTH;
+	cout << "letter isogram I'm thinking of?\n";
+	cout << endl;
+	return;
+}
 
-		cout << "Welcome to Bu11s and Cows";
-		cout << "Can you guess the " << WORLD_LENGT;
-		cout << " letter I'm thinking of?/n";
-		cout << endl;
-		return;
+	void PlayGame() 
+	{
 		
+		//loop for the number of turns asking for guesses
+		constexpr int NUMBER_OF_TURNS = 5;
+		for (int count = 1; count <= NUMBER_OF_TURNS; count++) {
+			string Guess = GetGuess();
+			cout << "Your guess was: " << Guess << endl;
+			cout << endl;
+		}
+
 	}
 
-	string GetGuessAndPrintBack()
+	string GetGuess()
 	{
 
 	//get a guess from the player
 		cout << "Enter your guess: ";
 		string Guess = "";
 		getline(cin, Guess);
-		//print the guess back
-		cout << "Your guess wa: " << endl;
 		return Guess;
 
 }
+
+	bool AskToPlayAgain()
+	{
+		cout << "Do you want to play again (y/n)?";
+		string Response = "";
+		getline(cin, Response);
+		//cout << "Is it y" << (Response[0] == 'y');
+		return (Response[0] == 'y')|| (Response[0] == 'Y');
+	}
