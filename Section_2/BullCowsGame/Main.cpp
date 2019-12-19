@@ -1,11 +1,15 @@
-
+/*This is some silly text to introudce
+this type of a comment*/
 #include <iostream>
 #include <string>
 #include "FBullCowGame.h"
 
+using FText = std::string;
+using int32 = int;
+
 void PrintIntro();
 void PlayGame();
-std::string GetGuess();
+FText GetGuess();
 bool AskToPlayAgain();
 
 FBullCowGame BCGame; //instance of a new game
@@ -19,14 +23,16 @@ int main()
 		PlayGame();
 		bPlayAgain = AskToPlayAgain();
 
-	} while (bPlayAgain);
+	} 
+	while (bPlayAgain);
 
 	std::cout << std::endl;
 	return 0; //exit the aplication
 }
 
 //intro
-void PrintIntro() {
+void PrintIntro() 
+{
 
 	constexpr int WORLD_LENGTH = 9;
 
@@ -40,29 +46,33 @@ void PrintIntro() {
 	void PlayGame() 
 	{
 
+		BCGame.Reset();
+		int32 MaxTries = BCGame.GetMaxTries();
 		
-		
-		
-		int MaxTries = BCGame.GetMaxTries();
-
 		//loop for the number of turns asking for guesses
 		
 	
-		for (int count = 1; count <= MaxTries; count++) {
-			std::string Guess = GetGuess();
+		for (int32 count = 1; count <= MaxTries; count++) {
+			FText Guess = GetGuess();
+
+			//submit valid quqess to the game
+			//print number of cows and bulls
+
+
 			std::cout << "Your guess was: " << Guess << std::endl;
 			std::cout << std::endl;
+
 		}
 
 	}
 
-	std::string GetGuess()
+	FText GetGuess()
 	{
-		int CurrentTry = BCGame.GetCurrentTry();
+		int32 CurrentTry = BCGame.GetCurrentTry();
 
 	//get a guess from the player
 		std::cout <<  " Try " << CurrentTry << ". Enter your guess: ";
-		std::string Guess = "";
+		FText Guess = "";
 		std::getline(std::cin, Guess);
 		return Guess;
 
@@ -71,7 +81,7 @@ void PrintIntro() {
 	bool AskToPlayAgain()
 	{
 		std::cout << "Do you want to play again (y/n)?";
-		std::string Response = "";
+		FText Response = "";
 		std::getline(std::cin, Response);
 		//std::cout << "Is it y" << (Response[0] == 'y');
 		return (Response[0] == 'y')|| (Response[0] == 'Y');
