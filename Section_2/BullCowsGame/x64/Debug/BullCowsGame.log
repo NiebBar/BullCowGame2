@@ -1,4 +1,3 @@
-﻿  FBullCowGame.cpp
-  Main.cpp
-  Generowanie kodu...
+﻿  Main.cpp
+c:\users\kaśka\desktop\b&c\z githuba\bullcowsgame-919ee2e3f984077feb1b40b476fde48726588d17\section_2\bullcowsgame\main.cpp(110): warning C4715: "GetValidGuess”: niewszystkie ścieżki kodu zwracają wartość
   BullCowsGame.vcxproj -> C:\Users\Kaśka\Desktop\B&C\Z githuba\BullCowsGame-919ee2e3f984077feb1b40b476fde48726588d17\Section_2\x64\Debug\BullCowsGame.exe
