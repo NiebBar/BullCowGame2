@@ -1,21 +1,23 @@
 /*This is some silly text to introudce
 this type of a comment*/
+#pragma once
+
 #include <iostream>
 #include <string>
 #include "FBullCowGame.h"
 
+//to make syntax Unreal friendly
 using FText = std::string;
 using int32 = int;
 
+//function prototypes as outside class
 void PrintIntro();
 void PlayGame();
 FText GetValidGuess();
 bool AskToPlayAgain();
 void PrintGameSummery(); 
 
-
-
-FBullCowGame BCGame; //instance of a new game
+FBullCowGame BCGame; //instance of a new game, wich we reuse across plays
 
 //the entry point of aplication
 int main()
@@ -47,6 +49,7 @@ void PrintIntro()
 	return;
 }
 
+	//play a single game to completion
 	void PlayGame() 
 	{
 
