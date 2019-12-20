@@ -40,6 +40,7 @@ void PrintIntro()
 {
 
 	std::cout << "\n\nWelcome to Bu11s and Cows, a fun word game.\n";
+	std::cout << "Tu mial byc fajny obrazek\n";
 	std::cout << "Can you guess the " << BCGame.GetHiddenWordLength();
 	std::cout << " letter isogram I'm thinking of?\n";
 	std::cout << std::endl;
@@ -79,7 +80,8 @@ void PrintIntro()
 
 			//get a guess from the player
 			int32 CurrentTry = BCGame.GetCurrentTry();
-			std::cout << " Try " << CurrentTry << ". Enter your guess: ";
+			std::cout << "Try " << CurrentTry << " of " << BCGame.GetMaxTries();
+			std::cout << ". Enter your guess: ";
 			std::getline(std::cin, Guess);
 
 
@@ -89,21 +91,20 @@ void PrintIntro()
 			switch (Status)
 			{
 			case EGuessStatus::Wrong_Length:
-				std::cout << "Please enter a " << BCGame.GetHiddenWordLength() << "letter word.\n";
+				std::cout << "Please enter a " << BCGame.GetHiddenWordLength() << "letter word.\n\n";
 				break;
 
 			case EGuessStatus::Not_Isogram:
-				std::cout << "Please enter a word without repeating letters\n";
+				std::cout << "Please enter a word without repeating letters\n\n";
 				break;
 			case EGuessStatus::Not_Lewercase:
-				std::cout << "Please enter all lower case letters.\n";
+				std::cout << "Please enter all lower case letters.\n\n";
 				break;
 			default:
 				// ASSume the guess is valid
 				break;
 			}
 
-			std::cout << std::endl;
 		} while (Status != EGuessStatus::OK); //keep loopin until we get no errors
 		return Guess;
 

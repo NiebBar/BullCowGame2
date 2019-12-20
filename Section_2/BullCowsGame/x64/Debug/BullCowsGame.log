@@ -1,6 +1,5 @@
 ﻿  FBullCowGame.cpp
-c:\users\kaśka\desktop\b&c\z githuba\bullcowsgame-919ee2e3f984077feb1b40b476fde48726588d17\section_2\bullcowsgame\fbullcowgame.cpp(14): warning C4267: "return": konwersja z "size_t" do "int32", możliwa utrata danych
+c:\users\kaśka\desktop\b&c\z githuba\bullcowsgame-919ee2e3f984077feb1b40b476fde48726588d17\section_2\bullcowsgame\fbullcowgame.cpp(11): warning C4267: "return": konwersja z "size_t" do "int32", możliwa utrata danych
+c:\users\kaśka\desktop\b&c\z githuba\bullcowsgame-919ee2e3f984077feb1b40b476fde48726588d17\section_2\bullcowsgame\fbullcowgame.cpp(16): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
 c:\users\kaśka\desktop\b&c\z githuba\bullcowsgame-919ee2e3f984077feb1b40b476fde48726588d17\section_2\bullcowsgame\fbullcowgame.cpp(59): warning C4267: "inicjowanie": konwersja z "size_t" do "int32", możliwa utrata danych
-  Main.cpp
-  Generowanie kodu...
   BullCowsGame.vcxproj -> C:\Users\Kaśka\Desktop\B&C\Z githuba\BullCowsGame-919ee2e3f984077feb1b40b476fde48726588d17\Section_2\x64\Debug\BullCowsGame.exe
